@@ -3,6 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathic Pathways - Spiritual Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Empathic Pathways</h1>
+            <p class="subtitle">A Spiritual Journey Through Images</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>Share Your Spiritual Journey</h2>
+                <div class="upload-container">
+                    <input type="file" id="imageUpload" accept="image/*" class="file-input">
+                    <label for="imageUpload" class="upload-button">
+                        Choose Image
+                    </label>
+                    <button id="uploadBtn" class="action-button" disabled>Upload to Firebase</button>
+                </div>
+                <div id="uploadProgress" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div id="progressBar" class="progress-fill"></div>
+                    </div>
+                    <p id="progressText">0%</p>
+                </div>
+                <div id="uploadStatus" class="status-message"></div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Sacred Gallery</h2>
+                <button id="loadImagesBtn" class="action-button">Load Images from Firebase</button>
+                <div id="gallery" class="gallery-grid"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>✨ Connected to Firebase Storage ✨</p>
+        </footer>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
     <title>Empathic Pathways</title>
     <link rel="stylesheet" href="index.css">
 </head>
